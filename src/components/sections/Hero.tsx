@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { HiPlay, HiArrowDown } from 'react-icons/hi';
+import { HiArrowDown } from 'react-icons/hi';
 import Button from '../ui/Button';
 
 // Animated counter component

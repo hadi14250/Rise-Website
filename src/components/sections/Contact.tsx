@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { HiCheck, HiExclamation } from 'react-icons/hi';
-import emailjs from '@emailjs/browser';
 
 const contactInfo = [
   {

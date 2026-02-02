@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HiCheck, HiStar, HiLightningBolt, HiGlobe } from 'react-icons/hi';
-import { FaTrophy, FaCheckCircle } from 'react-icons/fa';
 import SectionHeading from '../ui/SectionHeading';
 
 const differentiators = [

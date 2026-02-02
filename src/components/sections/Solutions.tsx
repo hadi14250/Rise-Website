@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaGraduationCap, FaUserTie, FaLaptop, FaUsers, FaBullhorn, FaMicrophone, FaRobot, FaChartLine, FaSearch } from 'react-icons/fa';
 import SectionHeading from '../ui/SectionHeading';
 import ServiceCard from '../ui/ServiceCard';

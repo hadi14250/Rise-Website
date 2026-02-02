@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { FaWhatsapp, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const footerLinks = {
   solutions: [

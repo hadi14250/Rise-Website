@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
     } else {
       setActiveSection('home');
     }
-  }, [location]);
+  }, [location, setIsMobileMenuOpen]);
 
   const handleNavClick = (path: string, sectionId: string | null) => {
     if (sectionId && location.pathname === '/') {
