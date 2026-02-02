@@ -49,7 +49,26 @@ const Contact: React.FC = () => {
     setError(null);
     
     try {
+      const formData = new FormData();
+      formData.append("access_key", "7194941c-a4da-4806-89b8-da51ac6b44de");
+      formData.append("name", formState.name);
+      formData.append("email", formState.email);
+      formData.append("company", formState.company);
+      formData.append("phone", formState.phone);
+      formData.append("service", formState.service);
+      formData.append("message", formState.message);
+      formData.append("subject", "New Contact Form Submission - Rise Global");
 
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (!data.success) {
+        throw new Error(data.message || 'Something went wrong');
+      }
       
       setIsSubmitted(true);
       

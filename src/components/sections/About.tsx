@@ -57,7 +57,7 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-primary-100 via-primary-50 to-accent-100 p-6 relative shadow-2xl">
               {/* Animated background blobs */}

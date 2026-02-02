@@ -71,10 +71,7 @@ const Footer: React.FC = () => {
                 className="h-20 w-auto object-contain"
               />
             </Link>
-            <p className="text-dark-300 leading-relaxed mb-6">
-              We rise by lifting others. Empowering individuals and organizations to achieve excellence through world-class training, coaching, and HR solutions.
-            </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-6">
               {[
                 { icon: FaLinkedin, href: 'https://www.linkedin.com/company/rise-middle-east/', label: 'LinkedIn' },
                 { icon: FaWhatsapp, href: 'https://wa.me/96179322109', label: 'WhatsApp' },

@@ -28,7 +28,7 @@ const WhatsAppWidget: React.FC = () => {
             className="absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 p-4">
+            <div className="p-4" style={{ background: 'linear-gradient(to right, #5BE584, #4ADE80)' }}>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
@@ -86,7 +86,8 @@ const WhatsAppWidget: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="relative w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow duration-300"
+        className="relative w-16 h-16 text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow duration-300"
+        style={{ background: 'linear-gradient(to right, #5BE584, #4ADE80)' }}
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -114,7 +115,7 @@ const WhatsAppWidget: React.FC = () => {
 
         {/* Pulse Animation */}
         {!isOpen && (
-          <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-25" />
+          <span className="absolute inset-0 rounded-full animate-ping opacity-25" style={{ backgroundColor: '#5BE584' }} />
         )}
       </motion.button>
     </div>
