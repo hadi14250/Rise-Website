@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
+import { useMobileMenu } from '../../context/MobileMenuContext';
 
 const WhatsAppWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isMobileMenuOpen } = useMobileMenu();
   const phoneNumber = '96179322109';
   const message = 'Hello! I would like to learn more about Rise Global services.';
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  // Hide widget when mobile menu is open
+  if (isMobileMenuOpen) {
+    return null;
+  }
 
   return (
     <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999 }}>
