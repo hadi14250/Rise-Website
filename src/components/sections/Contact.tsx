@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { HiCheck, HiExclamation } from 'react-icons/hi';
+import emailjs from '@emailjs/browser';
 
 const contactInfo = [
   {
@@ -49,26 +50,19 @@ const Contact: React.FC = () => {
     setError(null);
     
     try {
-      const formData = new FormData();
-      formData.append("access_key", "7194941c-a4da-4806-89b8-da51ac6b44de");
-      formData.append("name", formState.name);
-      formData.append("email", formState.email);
-      formData.append("company", formState.company);
-      formData.append("phone", formState.phone);
-      formData.append("service", formState.service);
-      formData.append("message", formState.message);
-      formData.append("subject", "New Contact Form Submission - Rise Global");
-
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-
-      const data = await response.json();
-
-      if (!data.success) {
-        throw new Error(data.message || 'Something went wrong');
-      }
+      await emailjs.send(
+        'service_qmybezv',
+        'template_001gfxi',
+        {
+          from_name: formState.name,
+          from_email: formState.email,
+          company: formState.company,
+          phone: formState.phone,
+          service: formState.service,
+          message: formState.message,
+        },
+        '-TJDhR3Gz0epASKZN'
+      );
       
       setIsSubmitted(true);
       
