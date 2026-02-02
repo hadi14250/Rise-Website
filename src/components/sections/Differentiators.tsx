@@ -28,7 +28,7 @@ const differentiators = [
 
 const Differentiators: React.FC = () => {
   return (
-    <section id="differentiators" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="differentiators" className="relative py-10 lg:py-14 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-950 to-primary-900" />
       

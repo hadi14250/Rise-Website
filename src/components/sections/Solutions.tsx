@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGraduationCap, FaUserTie, FaLaptop, FaUsers, FaBullhorn, FaMicrophone, FaRobot, FaChartLine, FaSearch } from 'react-icons/fa';
+import { FaGraduationCap, FaUserTie, FaUsers, FaBullhorn, FaMicrophone, FaRobot, FaChartLine, FaSearch } from 'react-icons/fa';
 import SectionHeading from '../ui/SectionHeading';
 import ServiceCard from '../ui/ServiceCard';
 
@@ -21,19 +21,11 @@ const services = [
     image: '/images/coaching-solutions.avif',
   },
   {
-    icon: <FaLaptop />,
-    title: 'E-Learning',
-    description: 'Flexible, high-quality digital training designed for busy professionals on the go.',
-    link: '/solutions#elearning',
-    color: 'teal' as const,
-    image: '/images/e-learning.jpg',
-  },
-  {
     icon: <FaUsers />,
     title: 'HR Consultancy',
     description: 'Strategic HR consultancy that strengthens organizational structure and optimizes talent performance.',
     link: '/solutions#hr',
-    color: 'blue' as const,
+    color: 'teal' as const,
     image: '/images/hr-consultancy.png',
   },
   {
@@ -80,7 +72,7 @@ const services = [
 
 const Solutions: React.FC = () => {
   return (
-    <section id="solutions" className="py-24 lg:py-32 bg-gradient-to-b from-white to-dark-50">
+    <section id="solutions" className="py-10 lg:py-14 bg-gradient-to-b from-white to-dark-50">
       <div className="section-container">
         <SectionHeading
           badge="Our Solutions"

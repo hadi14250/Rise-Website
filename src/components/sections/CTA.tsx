@@ -5,7 +5,7 @@ import Button from '../ui/Button';
 
 const CTA: React.FC = () => {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden">
+    <section className="relative py-10 lg:py-14 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-600" />
       

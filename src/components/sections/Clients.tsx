@@ -24,7 +24,7 @@ const industries = [
 
 const Clients: React.FC = () => {
   return (
-    <section id="clients" className="py-24 lg:py-32 bg-white">
+    <section id="clients" className="py-10 lg:py-14 bg-white">
       <div className="section-container">
         <SectionHeading
           badge="Industries Served"

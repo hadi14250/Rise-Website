@@ -28,7 +28,7 @@ const values = [
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-white">
+    <section id="about" className="py-10 lg:py-14 bg-white">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
           <motion.div

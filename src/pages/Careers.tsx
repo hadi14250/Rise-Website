@@ -39,7 +39,7 @@ const Careers: React.FC = () => {
               Send Us Your Resume
             </h2>
             <p className="text-dark-500 mb-6">
-              Email your resume and cover letter to:
+              Email your resume to:
             </p>
             <a 
               href="mailto:cs@riseglobal.me"

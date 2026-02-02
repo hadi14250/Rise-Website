@@ -58,20 +58,19 @@ const Navbar: React.FC = () => {
 
   const handleNavClick = (path: string, sectionId: string | null) => {
     if (sectionId && location.pathname === '/') {
-      // On home page, just scroll to section
+      // On home page, just scroll to section with offset for navbar
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const navbarHeight = 80; // Account for fixed navbar
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementPosition - navbarHeight,
+          behavior: 'smooth'
+        });
       }
     } else if (sectionId) {
       // Not on home page, navigate to home first then scroll
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+      navigate('/', { state: { scrollTo: sectionId } });
     } else {
       // Regular page navigation
       navigate(path);
@@ -146,20 +145,8 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            {/* CTA & Mobile Menu Button */}
+            {/* Mobile Menu Button */}
             <div className="flex items-center gap-4">
-              <motion.a
-                href="https://wa.me/96179322109"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <FaWhatsapp className="text-lg" />
-                <span>WhatsApp</span>
-              </motion.a>
-
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
